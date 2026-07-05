@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=.9, viewport-fit=cover">
+
+        <title>Bebedouros — Bebe água em Lisboa!</title>
+        <meta name="title" content="Bebedouros — Bebe água em Lisboa!" />
+        <meta name="description" content="Encontra o bebedouro mais próximo a ti em Lisboa e hidrata-te!" />
+        <link rel="manifest" href="/manifest.json">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://bebedouros.pt/" />
+        <meta property="og:title" content="Bebedouros — Bebe água em Lisboa!" />
+        <meta property="og:description" content="Encontra o bebedouro mais próximo a ti em Lisboa e hidrata-te!" />
+        <meta property="og:image" content="https://bebedouros.pt/preview.png" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://bebedouros.pt" />
+        <meta property="twitter:title" content="Bebedouros — Bebe água em Lisboa!" />
+        <meta property="twitter:description" content="Encontra o bebedouro mais próximo a ti em Lisboa e hidrata-te!" />
+        <meta property="twitter:image" content="https://bebedouros.pt/preview.png" />
+
+        <!-- iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="apple-touch-icon" href="/app-icon-512x.png">
+
+        <!-- Tabler Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="ui">
+
+            <div class="top">
+
+                <div class="logo">
+                    <img src="logo.svg" alt="Logótipo do Bebedouros">
+                    <div class="info">
+                        <div class="title">Bebedouros</div>
+                        <div class="version">Beta</div>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="about-btn">
+                        <i class="ti ti-info-circle"></i>
+                        Sobre
+                    </button>
+                    <a href="https://tally.so/r/2E58Zb" target="_blank">
+                        <button class="feedback-btn">
+                            <i class="ti ti-message-chatbot"></i>
+                            Feedback
+                        </button>
+                    </a>
+                    <button class="share-btn" style="display: none;">
+                        <i class="ti ti-share-2"></i>
+                        Partilhar
+                    </button>
+                    <div class="settings">
+                        <label>
+                            <div class="label">Mapa</div>
+                            <div class="select">
+                                <input type="checkbox" class="is-satellite">
+                                <div class="slider"></div>
+                                <div class="option off">Padrão</div>
+                                <div class="option on">Satélite</div>
+                            </div>
+                        </label>
+                        <label class="control">
+                            <div class="label">Toponímia</div>
+                            <div class="toggle">
+                                <input type="checkbox" class="labels-visible" checked>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="bottom">
+                <div class="mobile hint">Clica num <img src="icon.svg"> bebedouro para saberes mais.</div>
+                <div class="row">
+                    <div class="zoom-control">
+                        <button class="zoom-in-btn">
+                            <i class="ti ti-zoom-in"></i>
+                            Ampliar
+                        </button>
+                        <button class="zoom-out-btn">
+                            <i class="ti ti-zoom-out"></i>
+                            Diminuir
+                        </button>
+                    </div>
+                    <div class="hint">Clica num <img src="icon.svg"> bebedouro para saberes mais.</div>
+                    <button class="locate-btn">
+                        <i class="ti ti-current-location"></i>
+                        Localizar-me
+                    </button>
+                    <button class="loading-location-btn" style="display: none;">
+                        <i class="ti ti-loader-2"></i>
+                        Localizando...
+                    </button>
+                </div>
+            </div>
+
+            <div class="details modal off">
+                <div class="spacer"></div>
+                <div class="container">
+                    <div class="header">
+                        <h1>
+                            <img src="icon.svg">
+                            <span class="title"></span>
+                        </h1>
+                        <button class="close-btn"><i class="ti ti-x"></i></button>
+                    </div>
+                    <div class="content">
+                        <div class="address">
+                            <i class="ti ti-map-pin"></i>
+                            <div></div>
+                        </div>
+                        <div class="reduced-mobility" style="display: none;">
+                            <i class="ti ti-disabled"></i>
+                            Apto para uso com mobilidade reduzida
+                        </div>
+                        <div class="no-reduced-mobility" style="display: none;">
+                            <i class="ti ti-disabled-off"></i>
+                            Inapto para uso com mobilidade reduzida
+                        </div>
+                        <div class="coordinates"></div>
+                        <div class="apps">
+                            <a class="google-maps" href="" target="_blank">
+                                <div class="icon center" style="background-image: url('apps/google-maps.svg');"></div>
+                                <div class="name">Google Maps</div>
+                            </a>
+                            <a class="apple-maps" href="" target="_blank">
+                                <div class="icon full" style="background-image: url('apps/apple-maps.jpg');"></div>
+                                <div class="name">Apple Maps</div>
+                            </a>
+                            <a class="bing-maps" href="" target="_blank">
+                                <div class="icon center" style="background-image: url('apps/bing.svg');"></div>
+                                <div class="name">Bing Maps</div>
+                            </a>
+                            <a class="openstreetmap" href="" target="_blank">
+                                <div class="icon center" style="background-image: url('apps/openstreetmap.svg');"></div>
+                                <div class="name">OpenStreetMap</div>
+                            </a>
+                            <a class="new-app" href="https://tally.so/r/2E58Zb?tipo=Sugest%C3%A3o&app=Sim" target="_blank">
+                                <div class="icon"><i class="ti ti-map-question"></i></div>
+                                <div class="name">Sugerir App</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about modal off">
+                <div class="spacer"></div>
+                <div class="container">
+                    <div class="header">
+                        <h1>
+                            <i class="ti ti-info-circle"></i>
+                            Sobre
+                        </h1>
+                        <button class="close-btn"><i class="ti ti-x"></i></button>
+                    </div>
+                    <div class="content">
+
+                        <p><b>Ferramenta online para facilitar o acesso à água na cidade de Lisboa.</b></p>
+                        <ul>
+                            <li>Criado por <a href="https://bernzrdo.wtf/" target="_blank">bernzrdo</a></li>
+                            <li>Dados fornecidos pela <a href="https://geodados-cml.hub.arcgis.com/datasets/d2eb1eb1cfae400496bec1aeec4e25b2/explore?filters=eyJUSVBPTE9HSUEiOlsiQmViZWRvdXJvIl19&layer=1" target="_blank">Geodados CML</a></li>
+                        </ul>
+                        <p><i>(Não afiliado com a Câmara Municipal de Lisboa.)</i></p>
+
+                        <blockquote>“Um copo de água não se nega a ninguém.”</blockquote>
+                        
+                        <p>Lisboa está repleta de bebedouros, o problema <i>era</i> saber onde eles estão. Embora existam dados abertos fornecidos pela Câmara Municipal, estes encontram-se alojados numa plataforma pouco intuitiva e imprópria para o uso diário.</p>
+                        <p>O <b>Bebedouros</b> resolve este obstáculo. Perante a necessidade urgente durante a onda de calor do verão de 2026, esta ferramenta foi lançada para transformar dados estáticos numa interface útil para o povo, garantindo que o acesso à água seja um processo simples e direto.</p>
+                        
+                        <h2>
+                            <i class="ti ti-scale"></i>
+                            Ética do Projeto
+                        </h2>
+                        <p>Esta ferramenta é <i>software</i> livre, desenvolvido por e para a comunidade. Não existem anúncios, telemetria ou extração de dados. A nossa prioridade é a autonomia tecnológica e o acesso universal, recusando a lógica da exploração de dados e o lucro sobre o utilizador.</p>
+                        <p><b>Licenciado sob <a href="https://choosealicense.com/licenses/gpl-3.0/" target="_blank">GNU GPLv3</a></b></p>
+                        
+                        <h2>
+                            <i class="ti ti-icons"></i>
+                            Logótipo
+                        </h2>
+                        <div class="logo">
+                            <img src="logo.svg">
+                        </div>
+                        <p>O logótipo é uma junção de um dos corvos presente na <a href="https://www.lisboa.pt/municipio/camara-municipal/identidade-grafica" target="_blank">Marca da Câmara Municipal de Lisboa</a> com o bebedouro da <a href="https://thenounproject.com/icon/drinking-fountain-29/" target="_blank">AIGA</a>.</p>
+                        
+                        <h2>
+                            <i class="ti ti-map"></i>
+                            Mapa
+                        </h2>
+                        <ul>
+                            <li>Criado com <a href="https://leafletjs.com/" target="_blank">Leaflet</a></li>
+                            <li>Mapa Padrão: &copy; <a href="http://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions" target="_blank">CARTO</a></li>
+                            <li>Mapa Satélite: Esri, Vantor, Earthstar Geographics e a comunidade de utilizadores SIG.</li>
+                        </ul>
+
+                        <a href="https://github.com/bernzrdo/bebedouros" target="_blank">
+                            <button>
+                                <i class="ti ti-brand-github"></i>
+                                GitHub
+                            </button>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="error modal off">
+                <div class="spacer"></div>
+                <div class="container">
+                    <div class="header">
+                        <h1>
+                            <i class="ti ti-mood-sad"></i>
+                            Erro
+                        </h1>
+                        <button class="close-btn"><i class="ti ti-x"></i></button>
+                    </div>
+                    <div class="content">
+                        <p>Ocorreu um erro ao tentar obter informações sobre os bebedouros.</p>
+                        <p>Pedimos que verifiques se não há nenhum problema do teu lado. Se o erro continuar, talvez seja um problema do nosso lado.</p>
+                        <div class="row">
+                            <button class="refresh-btn">
+                                <i class="ti ti-refresh"></i>
+                                Recarregar
+                            </button>
+                            <a href="https://tally.so/r/2E58Zb?tipo=Problema%2FBug" target="_blank">
+                                <button class="feedback-btn">
+                                    <i class="ti ti-message-chatbot"></i>
+                                    Reportar erro
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="no-geolocator modal off">
+                <div class="spacer"></div>
+                <div class="container">
+                    <div class="header">
+                        <h1>
+                            <i class="ti ti-current-location-off"></i>
+                            Não te consigo localizar
+                        </h1>
+                        <button class="close-btn"><i class="ti ti-x"></i></button>
+                    </div>
+                    <div class="content">
+                        <p>Isto pode acontecer por várias razões:</p>
+                        <ul>
+                            <li>Há algum problema com as permissões de localização.</li>
+                            <li>Falhas de GPS ou no Serviço de Localização do teu dispositivo.</li>
+                            <li>O teu navegador ou dispositivo não suporta geolocalização.</li>
+                            <li>Entre outras razões.</li>
+                        </ul>
+                        <p>Pedimos que verifiques se não há nenhum problema do teu lado. Se o erro continuar, talvez seja um problema do nosso lado.</p>
+                        <div class="row">
+                            <button class="refresh-btn">
+                                <i class="ti ti-refresh"></i>
+                                Recarregar
+                            </button>
+                            <a href="https://tally.so/r/2E58Zb?tipo=Problema%2FBug" target="_blank">
+                                <button class="feedback-btn">
+                                    <i class="ti ti-message-chatbot"></i>
+                                    Reportar erro
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="map"></div>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>
