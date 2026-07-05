@@ -68,7 +68,7 @@ $aboutBtn.addEventListener('click', ()=>openModal($aboutModal))
 const $shareBtn = $top.querySelector<HTMLButtonElement>('.share-btn')!
 
 if(navigator.share !== undefined){
-    $shareBtn.addEventListener('click', ()=>navigator.share({ url: 'https://bebedouros.pt' }))
+    $shareBtn.addEventListener('click', ()=>navigator.share({ url: 'https://bebedouros.github.io' }))
     $shareBtn.style.removeProperty('display')
 }
 
