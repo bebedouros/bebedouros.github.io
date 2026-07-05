@@ -9,15 +9,6 @@ const $labelsVisible = $settings.querySelector<HTMLInputElement>('.labels-visibl
 
 const SELECT_PADDING = 2
 
-for(const $select of $settings.querySelectorAll<HTMLDivElement>('.select')){
-
-    updateSelectSlider($select)
-
-    $select.querySelector<HTMLInputElement>('input[type="checkbox"]')!
-        .addEventListener('change', ()=>updateSelectSlider($select))
-
-}
-
 function updateSelectSlider($select: HTMLDivElement){
 
     const $input = $select.querySelector<HTMLInputElement>('input[type="checkbox"]')!
@@ -74,5 +65,14 @@ export function initLayers(map: L.Map){
     $labelsVisible.checked = getConfig('labelsVisible')
 
     updateLayers()
+
+    for(const $select of $settings.querySelectorAll<HTMLDivElement>('.select')){
+
+        updateSelectSlider($select)
+
+        $select.querySelector<HTMLInputElement>('input[type="checkbox"]')!
+            .addEventListener('change', ()=>updateSelectSlider($select))
+
+    }
 
 }
