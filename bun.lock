@@ -7,8 +7,6 @@
       "dependencies": {
         "@tabler/icons-webfont": "^3.44.0",
         "leaflet": "^1.9.4",
-        "leaflet-doubletapdrag": "^0.1.2",
-        "leaflet-doubletapdragzoom": "^0.3.2",
       },
       "devDependencies": {
         "@types/leaflet": "^1.9.21",
@@ -292,10 +290,6 @@
     "jsonfile": ["jsonfile@6.2.1", "", { "dependencies": { "universalify": "^2.0.0" }, "optionalDependencies": { "graceful-fs": "^4.1.6" } }, "sha512-zwOTdL3rFQ/lRdBnntKVOX6k5cKJwEc1HdilT71BWEu7J41gXIB2MRp+vxduPSwZJPWBxEzv4yH1wYLJGUHX4Q=="],
 
     "leaflet": ["leaflet@1.9.4", "", {}, "sha512-nxS1ynzJOmOlHp+iL3FyWqK89GtNL8U8rvlMOsQdTTssxZwCXh8N2NB3GDQOL+YR3XnWyZAxwQixURb+FA74PA=="],
-
-    "leaflet-doubletapdrag": ["leaflet-doubletapdrag@0.1.2", "", { "peerDependencies": { "leaflet": "^1.0.0" } }, "sha512-YE7fyTrAAMxy+tX4VxqM14TuSvLPaiXzmYGCQnp3D1phmCg7AEe6KZqgQa/gJ8w5oocG1RTSNMQDlMIDAwmCWA=="],
-
-    "leaflet-doubletapdragzoom": ["leaflet-doubletapdragzoom@0.3.2", "", { "dependencies": { "leaflet-doubletapdrag": "^0.1.0" }, "peerDependencies": { "leaflet": "^1.0.0" } }, "sha512-zwW9sWR2V8q0y5xFYvK8guKpHHZ9XDYAvVsyL78QmaCLkAeMpZwgV/yAMG9rRleF+k9zjVWQp/C5tu2OhkGnFw=="],
 
     "lightningcss": ["lightningcss@1.32.0", "", { "dependencies": { "detect-libc": "^2.0.3" }, "optionalDependencies": { "lightningcss-android-arm64": "1.32.0", "lightningcss-darwin-arm64": "1.32.0", "lightningcss-darwin-x64": "1.32.0", "lightningcss-freebsd-x64": "1.32.0", "lightningcss-linux-arm-gnueabihf": "1.32.0", "lightningcss-linux-arm64-gnu": "1.32.0", "lightningcss-linux-arm64-musl": "1.32.0", "lightningcss-linux-x64-gnu": "1.32.0", "lightningcss-linux-x64-musl": "1.32.0", "lightningcss-win32-arm64-msvc": "1.32.0", "lightningcss-win32-x64-msvc": "1.32.0" } }, "sha512-NXYBzinNrblfraPGyrbPoD19C1h9lfI/1mzgWYvXUTe414Gz/X1FD2XBZSZM7rRTrMA8JL3OtAaGifrIKhQ5yQ=="],
 

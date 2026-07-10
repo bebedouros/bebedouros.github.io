@@ -2,8 +2,6 @@ import './style.scss'
 import 'leaflet/dist/leaflet.css'
 import '@tabler/icons-webfont/dist/tabler-icons.css'
 import L from 'leaflet'
-import 'leaflet-doubletapdrag'
-import 'leaflet-doubletapdragzoom'
 import { openModal } from './modal'
 import { initLayers } from './layers'
 import { initZoom } from './zoom'
@@ -21,8 +19,6 @@ const map = L.map($map, {
     attributionControl: false,
     maxZoom: 18,
     minZoom: 12,
-    doubleTapDragZoom: 'center',
-    doubleTapDragZoomOptions: { reverse: true }
 } as L.MapOptions & {
     doubleTapDragZoom?: boolean | 'center'
     doubleTapDragZoomOptions?: { reverse?: boolean }
@@ -68,7 +64,7 @@ $aboutBtn.addEventListener('click', ()=>openModal($aboutModal))
 const $shareBtn = $top.querySelector<HTMLButtonElement>('.share-btn')!
 
 if(navigator.share !== undefined){
-    $shareBtn.addEventListener('click', ()=>navigator.share({ url: 'https://bebedouros.bernzrdo.wtf' }))
+    $shareBtn.addEventListener('click', ()=>navigator.share({ url: 'https://bebedouros.pt/' }))
     $shareBtn.style.removeProperty('display')
 }
 
